@@ -1,7 +1,7 @@
 {
   "$schema": "https://dubstack.dev/schema/v1.json",
   "site": {
-    "name": "DubStack Documentation",
+    "name": "Dubstack",
     "tagline": "Beautiful, AI-powered documentation for modern teams",
     "logo": {
       "light": "/logo/light.svg",
@@ -19,10 +19,10 @@
       "content_background": "#0e0e10",
       "header_background": "#0e0e10",
       "footer_background": "#18171A",
-      "text_primary": "#f5f5f5",
+      "text_primary": "#f3f4f6",
       "text_secondary": "#a1a1aa",
       "text_muted": "#71717a",
-      "border_default": "rgba(255, 255, 255, 0.08)",
+      "border_default": "#ffffff14",
       "border_subtle": "rgba(255, 255, 255, 0.06)"
     },
     "fonts": {
@@ -34,8 +34,9 @@
       "background": "#0d0d0d",
       "header_background": "#18171A",
       "border_color": "#2d2d2d",
-      "header_height": 40,
-      "radius": 8
+      "header_height": 32,
+      "radius": 18,
+      "syntax_theme": "github-dark"
     },
     "scrollbar": {
       "track_dark": "#1a1a1a",
@@ -49,6 +50,13 @@
       "enabled": true,
       "placeholder": "Search...",
       "position": "sidebar"
+    },
+    "assistant": {
+      "title": "Assistant",
+      "welcome_title": "Hi! How can I help you today?",
+      "welcome_subtitle": "Ask me anything about the docs, code samples, or best practices.",
+      "background_color": "#0e0e10",
+      "width": 300
     }
   },
   "layout": {
@@ -58,62 +66,173 @@
       "collapsible": true
     },
     "header": {
-      "height": 56,
+      "height": 70,
       "sticky": true
     },
     "content": {
       "max_width": 900
     },
     "canvas": {
-      "components": [],
-      "last_updated": null
+      "components": [
+        {
+          "instanceId": "default-header",
+          "componentId": "site-header",
+          "x": 0,
+          "y": 0,
+          "width": 1200,
+          "height": 56,
+          "zIndex": 2
+        },
+        {
+          "instanceId": "default-sidebar",
+          "componentId": "sidebar-nav",
+          "x": 0,
+          "y": 56,
+          "width": 240,
+          "height": 844,
+          "zIndex": 1
+        },
+        {
+          "instanceId": "default-assistant",
+          "componentId": "assistant-widget",
+          "x": 900,
+          "y": 56,
+          "width": 300,
+          "height": 844,
+          "zIndex": 1
+        },
+        {
+          "instanceId": "main-content-1766503881699",
+          "componentId": "main-content",
+          "x": 240,
+          "y": 105,
+          "width": 600,
+          "height": 700,
+          "zIndex": 4
+        }
+      ],
+      "last_updated": "2025-12-23T15:32:53.040Z"
     }
   },
   "navigation": {
     "header": [
-      { "label": "Home", "href": "/" },
-      { "label": "Docs", "href": "/docs" }
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Docs",
+        "href": "/docs"
+      }
     ],
     "sidebar": [
       {
         "section": "Getting Started",
         "icon": "rocket",
         "items": [
-          { "label": "Introduction", "href": "/", "icon": "book" },
-          { "label": "Quick Start", "href": "/quickstart", "icon": "zap" },
-          { "label": "Development", "href": "/development", "icon": "code" }
+          {
+            "label": "Introduction",
+            "href": "/",
+            "icon": "book"
+          },
+          {
+            "label": "Quick Start",
+            "href": "/quickstart",
+            "icon": "zap"
+          },
+          {
+            "label": "Development",
+            "href": "/development",
+            "icon": "code"
+          }
         ]
       },
       {
         "section": "Essentials",
         "icon": "layers",
         "items": [
-          { "label": "MDX Components", "href": "/essentials/markdown", "icon": "shapes" },
-          { "label": "Code Blocks", "href": "/essentials/code", "icon": "code" },
-          { "label": "Images & Media", "href": "/essentials/images", "icon": "image" },
-          { "label": "Navigation", "href": "/essentials/navigation", "icon": "map" },
-          { "label": "Reusable Snippets", "href": "/essentials/reusable-snippets", "icon": "recycle" },
-          { "label": "Settings", "href": "/essentials/settings", "icon": "gear" }
+          {
+            "label": "MDX Components",
+            "href": "/essentials/markdown",
+            "icon": "shapes"
+          },
+          {
+            "label": "Code Blocks",
+            "href": "/essentials/code",
+            "icon": "code"
+          },
+          {
+            "label": "Images & Media",
+            "href": "/essentials/images",
+            "icon": "image"
+          },
+          {
+            "label": "Navigation",
+            "href": "/essentials/navigation",
+            "icon": "map"
+          },
+          {
+            "label": "Reusable Snippets",
+            "href": "/essentials/reusable-snippets",
+            "icon": "recycle"
+          },
+          {
+            "label": "Settings",
+            "href": "/essentials/settings",
+            "icon": "gear"
+          }
         ]
       },
       {
         "section": "API Reference",
         "icon": "code",
         "items": [
-          { "label": "Introduction", "href": "/api-reference/introduction", "icon": "book" },
-          { "label": "GET Endpoint", "href": "/api-reference/endpoint/get", "icon": "arrow-down" },
-          { "label": "POST Endpoint", "href": "/api-reference/endpoint/create", "icon": "arrow-up" },
-          { "label": "DELETE Endpoint", "href": "/api-reference/endpoint/delete", "icon": "trash" },
-          { "label": "Webhooks", "href": "/api-reference/endpoint/webhook", "icon": "webhook" }
+          {
+            "label": "Introduction",
+            "href": "/api-reference/introduction",
+            "icon": "book"
+          },
+          {
+            "label": "GET Endpoint",
+            "href": "/api-reference/endpoint/get",
+            "icon": "arrow-down"
+          },
+          {
+            "label": "POST Endpoint",
+            "href": "/api-reference/endpoint/create",
+            "icon": "arrow-up"
+          },
+          {
+            "label": "DELETE Endpoint",
+            "href": "/api-reference/endpoint/delete",
+            "icon": "trash"
+          },
+          {
+            "label": "Webhooks",
+            "href": "/api-reference/endpoint/webhook",
+            "icon": "webhook"
+          }
         ]
       },
       {
         "section": "AI Tools",
         "icon": "sparkles",
         "items": [
-          { "label": "Claude Code", "href": "/ai-tools/claude-code", "icon": "terminal" },
-          { "label": "Cursor", "href": "/ai-tools/cursor", "icon": "arrow-pointer" },
-          { "label": "Windsurf", "href": "/ai-tools/windsurf", "icon": "wind" }
+          {
+            "label": "Claude Code",
+            "href": "/ai-tools/claude-code",
+            "icon": "terminal"
+          },
+          {
+            "label": "Cursor",
+            "href": "/ai-tools/cursor",
+            "icon": "arrow-pointer"
+          },
+          {
+            "label": "Windsurf",
+            "href": "/ai-tools/windsurf",
+            "icon": "wind"
+          }
         ]
       }
     ]
