@@ -99,16 +99,17 @@
           "y": 56,
           "width": 300,
           "height": 844,
-          "zIndex": 1
+          "zIndex": 10
         },
         {
           "instanceId": "main-content-1766503881699",
           "componentId": "main-content",
-          "x": 240,
+          "x": 250,
           "y": 105,
           "width": 600,
           "height": 700,
-          "zIndex": 4
+          "zIndex": 1,
+          "locked": true
         }
       ],
       "last_updated": "2025-12-23T15:32:53.040Z"
