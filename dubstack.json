@@ -61,7 +61,7 @@
   },
   "layout": {
     "sidebar": {
-      "width": 240,
+      "width": 200,
       "position": "left",
       "collapsible": true
     },
@@ -102,17 +102,17 @@
           "zIndex": 10
         },
         {
-          "instanceId": "main-content-1766503881699",
+          "instanceId": "main-content",
           "componentId": "main-content",
-          "x": 256,
-          "y": 105,
+          "x": 224,
+          "y": 56,
           "width": 600,
-          "height": 700,
+          "height": 844,
           "zIndex": 1,
           "locked": true
         }
       ],
-      "last_updated": "2025-12-23T15:32:53.040Z"
+      "last_updated": "2025-12-26T03:00:00.000Z"
     }
   },
   "navigation": {
