@@ -90,8 +90,7 @@
           "y": 56,
           "width": 200,
           "height": 844,
-          "zIndex": 1,
-          "locked": true
+          "zIndex": 1
         },
         {
           "instanceId": "default-assistant",
